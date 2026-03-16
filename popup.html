@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3"/>
+        <path d="M16 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3"/>
+        <line x1="12" y1="8" x2="12" y2="16"/>
+        <polyline points="8 12 12 8 16 12"/>
+      </svg>
+    </div>
+    <div class="title">
+      <span class="name">Unit Converter</span>
+      <span class="tagline">Hover to convert</span>
+    </div>
+    <label class="toggle" title="Enable / Disable">
+      <input type="checkbox" id="enabledToggle" checked />
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <section class="card" id="statusCard">
+    <div class="card-row">
+      <span class="card-label">Exchange Rates</span>
+      <span class="card-value" id="rateStatus">Loading…</span>
+    </div>
+    <div class="card-row">
+      <span class="card-label">Last Updated</span>
+      <span class="card-value" id="rateTime">—</span>
+    </div>
+  </section>
+
+  <section class="chips-section">
+    <p class="section-title">Detected unit types</p>
+    <div class="chips">
+      <span class="chip">🌡 Temperature</span>
+      <span class="chip">📏 Length</span>
+      <span class="chip">⚖ Weight</span>
+      <span class="chip">🧪 Volume</span>
+      <span class="chip">🚀 Speed</span>
+      <span class="chip">📐 Area</span>
+      <span class="chip">💱 Currency</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>v1.0.0</span>
+    <span>·</span>
+    <a href="https://open.er-api.com" target="_blank" rel="noopener">Rate source</a>
+  </footer>
+  <p class="footnote" id="rateFootnote">Rates fetched: —</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+/* popup.css */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 290px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  background: linear-gradient(135deg, #fffde7 0%, #fff8e1 100%);
+}
+
+.logo {
+  color: #f9a825;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.tagline {
+  font-size: 11px;
+  color: #888;
+}
+
+/* Toggle switch */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 22px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.toggle input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 22px;
+  transition: background 0.2s;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 3px;
+  top: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.toggle input:checked + .slider { background: #ffc107; }
+.toggle input:checked + .slider::before { transform: translateX(16px); }
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.card {
+  margin: 12px 14px 0;
+  background: #fafafa;
+  border: 1px solid #efefef;
+  border-radius: 8px;
+  padding: 10px 12px 8px;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.card-label { color: #888; font-size: 12px; }
+
+.card-value {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.card-value.ok { color: #2e7d32; }
+.card-value.error { color: #c62828; }
+
+/* ── Chips ───────────────────────────────────────────────────────────────── */
+.chips-section {
+  padding: 12px 14px 4px;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  background: #fff9c4;
+  border: 1px solid #f9e03b;
+  border-radius: 20px;
+  font-size: 11.5px;
+  color: #5a4000;
+  font-weight: 500;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px 12px;
+  margin-top: 10px;
+  font-size: 11px;
+  color: #bbb;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+footer a:hover { color: #888; text-decoration: underline; }
+
+.footnote {
+  padding: 0 16px 12px;
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+}
