@@ -26,17 +26,6 @@
     </label>
   </header>
 
-  <section class="card" id="statusCard">
-    <div class="card-row">
-      <span class="card-label">Exchange Rates</span>
-      <span class="card-value" id="rateStatus">Loading…</span>
-    </div>
-    <div class="card-row">
-      <span class="card-label">Last Updated</span>
-      <span class="card-value" id="rateTime">—</span>
-    </div>
-  </section>
-
   <section class="chips-section">
     <p class="section-title">Detected unit types</p>
     <div class="chips">
@@ -51,11 +40,13 @@
   </section>
 
   <footer>
-    <span>v1.0.0</span>
-    <span>·</span>
-    <a href="https://open.er-api.com" target="_blank" rel="noopener">Rate source</a>
+    <div class="footer-meta">
+      <a href="https://open.er-api.com" target="_blank" rel="noopener">Source</a>
+      <span class="dot">·</span>
+      <span id="rateFootnote">—</span>
+    </div>
+    <span class="footer-version">v1.0.0</span>
   </footer>
-  <p class="footnote" id="rateFootnote">Rates fetched: —</p>
 
   <script src="popup.js"></script>
 </body>

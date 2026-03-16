@@ -80,33 +80,6 @@ header {
 .toggle input:checked + .slider { background: #ffc107; }
 .toggle input:checked + .slider::before { transform: translateX(16px); }
 
-/* ── Card ────────────────────────────────────────────────────────────────── */
-.card {
-  margin: 12px 14px 0;
-  background: #fafafa;
-  border: 1px solid #efefef;
-  border-radius: 8px;
-  padding: 10px 12px 8px;
-}
-
-.card-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3px 0;
-}
-
-.card-label { color: #888; font-size: 12px; }
-
-.card-value {
-  font-size: 12px;
-  font-weight: 500;
-  color: #333;
-}
-
-.card-value.ok { color: #2e7d32; }
-.card-value.error { color: #c62828; }
-
 /* ── Chips ───────────────────────────────────────────────────────────────── */
 .chips-section {
   padding: 12px 14px 4px;
@@ -144,24 +117,38 @@ header {
 footer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
+  justify-content: space-between;
+  gap: 8px;
   padding: 10px 16px 12px;
   margin-top: 10px;
-  font-size: 11px;
-  color: #bbb;
 }
 
-footer a {
-  color: #bbb;
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+  font-size: 9px;
+  color: #999;
+}
+
+.footer-meta a {
+  color: #999;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
-footer a:hover { color: #888; text-decoration: underline; }
+.footer-meta a:hover { color: #888; text-decoration: underline; }
 
-.footnote {
-  padding: 0 16px 12px;
-  text-align: center;
-  font-size: 10px;
+#rateFootnote {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-version {
+  flex-shrink: 0;
+  font-size: 9px;
   color: #999;
 }
